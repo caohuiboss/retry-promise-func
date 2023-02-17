@@ -9,25 +9,24 @@
  * @returns 当函数调用成功时解决Promise，否则拒绝Promise
  */
 export const retry = async <T>(
-    fn: (params: any) => Promise<T>,
-    params: any = {},
-    times = 40,
-    delay = 1600
-  ): Promise<T> => {
-    return new Promise((resolve, reject) => {
-      const tFn = function () {
-        fn(params)
-          .then(resolve)
-          .catch((e) => {
-            if (times-- > 0) {
-              console.log(`还有${times}次机会`);
-              setTimeout(tFn, delay);
-            } else {
-              reject(e);
-            }
-          });
-      };
-      return tFn();
-    });
-  };
-  
+  fn: (params: any) => Promise<T>,
+  params: any = {},
+  times = 40,
+  delay = 1600
+): Promise<T> => {
+  return new Promise((resolve, reject) => {
+    const tFn = function () {
+      fn(params)
+        .then(resolve)
+        .catch((e) => {
+          if (times-- > 0) {
+            console.log(`还有${times}次机会`);
+            setTimeout(tFn, delay);
+          } else {
+            reject(e);
+          }
+        });
+    };
+    return tFn();
+  });
+};
