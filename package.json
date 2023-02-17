@@ -5,23 +5,28 @@
   "main": "./lib",
   "scripts": {
     "build": "rollup -c",
-    "clean": "rm -rf lib",
-    "prepare": "npm run clean && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf  ./lib",
+    "prepare": "npm run clean && npm run build"
   },
+  "type": "module",
+  "author": "Chain <caohuiboss@qq.com>",
+  "license": "ISC",
   "keywords": [
     "retry-promise-func",
     "retry-promise",
     "promise",
     "retry"
   ],
-  "type": "module",
-  "author": "caohuiboss",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caohuiboss/retry-promise-func.git"
+  },
+  "homepage": "https://github.com/caohuiboss/retry-promise-func",
   "dependencies": {
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "rimraf": "^4.1.2",
     "rollup": "^3.15.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-dts": "^5.2.0",

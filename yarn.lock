@@ -1299,6 +1299,11 @@ resolve@^1.14.2, resolve@^1.22.1:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
+rimraf@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.npmmirror.com/rimraf/-/rimraf-4.1.2.tgz#20dfbc98083bdfaa28b01183162885ef213dbf7c"
+  integrity sha512-BlIbgFryTbw3Dz6hyoWFhKk+unCcHMSkZGrTFVAx2WmttdBSonsdtRlwiuTbDqTKr+UlXIUqJVS4QT5tUzGENQ==
+
 rollup-plugin-babel@^4.4.0:
   version "4.4.0"
   resolved "https://registry.npmmirror.com/rollup-plugin-babel/-/rollup-plugin-babel-4.4.0.tgz#d15bd259466a9d1accbdb2fe2fff17c52d030acb"
